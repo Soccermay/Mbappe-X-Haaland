@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 10%;
+    white-space: nowrap;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    white-space: nowrap;
+    top: 30%;
+    left: 10%;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.container.hover-left .left {
+    width: 75%;
+}
+
+.container.hover-left .right {
+    width: 25%;
+}
+
+.container.hover-left .right h1 {
+    font-size: 20px;
+}
+
+.container.hover-left .right ul{
+    font-size: 10px;
+}
+
+.container.hover-right .right {
+    width: 75%;
+}
+
+.container.hover-right .left {
+    width: 25%;
+}
+
+.container.hover-right .left h1 {
+    font-size: 20px;
+    top: 40%;
+}
+
+.container.hover-right .left ul{
+    font-size: 30px;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background-image: url(images/Mbappe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(68, 68, 173, 0.3);
+}
+
+.split.right {
+    right: 0;
+    background-image: url(images/Haaland.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(27, 155, 234, 0.3);
+}
+.split.left,.split.right,.split.left::before,.split.right::before {
+    transition: all .5s ease-in-out;
+}
+
+@mdia(max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    ul{
+        font-size: 13px;
+    }
+
+    .container.hover-right .left h1 {
+        font-size: 15px;
+        top: 40%;
+    }
+
+    .container.hover-right .left ul {
+        font-size: 8px;
+    }
+
+    .container.hover-left .right h1 {
+        font-size: 15px;
+        top: 40%;
+    }
+
+    .container.hover-left .right ul {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    ul {
+        font-size: 10px;
+    }
+
+    .container.hover-left .right h1 {
+        font-size: 10px;
+        top: 40%;
+    }
+
+    .container.hover-left .right ul {
+        font-size: 5px;
+    }
+
+    .container.hover-right .left h1 {
+        font-size: 10px;
+        top: 40%;
+    }
+
+    .container.hover-right .left ul {
+        font-size: 5px;
+    }
+}
